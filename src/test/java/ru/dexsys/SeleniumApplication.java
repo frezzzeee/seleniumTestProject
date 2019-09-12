@@ -18,14 +18,14 @@ import static io.github.bonigarcia.wdm.WebDriverManager.main;
 public class SeleniumApplication {
     //Тестируется добавление в корзину Процессора AMD Athlon X4 840 OEM со страницы товара
     @Before
-    public void start() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resourses/chromedriver.exe");
-        WebDriverManager.chromedriver().setup();
-
+    public void before() {
+        //NFR
     }
 
     @Test
     public void TitleTest() {
+        System.setProperty("webdriver.chrome.driver", "src/test/resourses/chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         MainPage mainPage = new MainPage(driver);
         mainPage.webDriver.get("https://technopoint.ru/");
@@ -50,7 +50,6 @@ public class SeleniumApplication {
     //Тестируется добавление в корзину Процессора AMD Athlon X4 840 OEM со страницы списка товаров
     @Test
     public void ItemListTest() {
-        start();
         /*System.setProperty("webdriver.chrome.driver", "src/test/resourses/chromedriver.exe");
         WebDriverManager.chromedriver().setup();*/
         WebDriver driver = new ChromeDriver();

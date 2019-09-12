@@ -32,14 +32,14 @@ public class MainPage {
         public void clickToNBasic() {
             basic.click();
         }
-        //Процессоры
+        //Процессоры /
     @FindBy (xpath = "/html/body/div[1]/main/div[3]/a[1]")
         private WebElement processors;
         public void clickToProcessors() {
             processors.click();
         }
         //Процессор AMD Athlon X4 840 OEM
-    @FindBy (xpath = "//*[@id=\"catalog-items-page\"]/div[5]/div[2]/div[1]/div[1]/div[2]/div/div[1]/div/div[1]/div[1]/div/div[2]/div[1]/a")
+    @FindBy (xpath = "//a[text()=\"Процессор AMD Athlon X4 840 OEM\"]")
         private WebElement amd;
         public void clickToAmd() {
             amd.click();
@@ -48,7 +48,7 @@ public class MainPage {
             return amd.getText();
         }
         //Процессор AMD A6-9500 OEM
-    @FindBy (xpath = "//*[@id=\"catalog-items-page\"]/div[5]/div[2]/div[1]/div[1]/div[2]/div/div[1]/div/div[1]/div[1]/div/div[2]/div[1]/a")
+    @FindBy (xpath = "//a[text()=\"Процессор AMD A6-9500 OEM\"]")
         private WebElement amdFail;
         public String gettingProductFail () {
             return amdFail.getText();
@@ -70,7 +70,7 @@ public class MainPage {
             cart.click();
     }
     //Имя товара в корзине
-    @FindBy (xpath = "/html/body/div[1]/main/div[2]/div[2]/div/div/div[1]/div/div/div/div[2]/div[1]/a")
+    @FindBy (xpath = "//a[text()=\"Процессор AMD Athlon X4 840 OEM\"]")
         private WebElement compareName;
         public String gettingProductName() {
             return compareName.getText();
