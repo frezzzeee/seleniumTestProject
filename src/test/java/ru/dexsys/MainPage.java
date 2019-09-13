@@ -38,20 +38,14 @@ public class MainPage {
         public void clickToProcessors() {
             processors.click();
         }
-        //Процессор AMD Athlon X4 840 OEM
-    @FindBy (xpath = "//a[text()=\"Процессор AMD Athlon X4 840 OEM\"]")
+        //Процессор
+    @FindBy (css="div[class*='product-info__title-link']>a[class*='ui-link']")
         private WebElement amd;
         public void clickToAmd() {
             amd.click();
         }
         public String gettingProduct () {
             return amd.getText();
-        }
-        //Процессор AMD A6-9500 OEM
-    @FindBy (xpath = "//a[text()=\"Процессор AMD A6-9500 OEM\"]")
-        private WebElement amdFail;
-        public String gettingProductFail () {
-            return amdFail.getText();
         }
         //Кнопка Купить на странице товара
     @FindBy (className = "btn-cart")
@@ -64,7 +58,7 @@ public class MainPage {
         buy.click();
     }
     //Кнопка Корзина
-    @FindBy (xpath = "//*[@id=\"header-search\"]/div/div[2]/a[3]")
+    @FindBy (css = "div[class*='buttons']>a[class*='btn-cart-link']")
     private WebElement cart;
         public void clickToCart() {
             cart.click();
